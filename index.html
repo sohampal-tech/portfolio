@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soham Pal — Computer Science Engineering & Aspiring Data Scientist | 360° Experience</title>
+  <meta name="description"
+    content="Cinematic 360° portfolio of Soham Pal — Computer Science Engineering Student & Aspiring Data Scientist specializing in Machine Learning, Deep Learning, and Predictive Systems.">
+  <meta name="keywords"
+    content="Soham Pal, Data Scientist, Machine Learning, Computer Science, Deep Learning, Python, C++, TensorFlow, Portfolio, 360">
+
+  <!-- Google Fonts: Outfit & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="loading">
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Ambient Glow & Texture Overlays -->
+  <div class="ambient-glow"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- Luxury Minimal Preloader Screen -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-monogram">SP.</div>
+    <div class="preloader-track">
+      <div class="preloader-bar" id="preloader-bar"></div>
+    </div>
+    <div class="preloader-status">
+      <span>LOADING 360° EXPERIENCE</span>
+      <span id="preloader-percent">0%</span>
+    </div>
+  </div>
+
+  <div class="site-wrapper">
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-logo" aria-label="Soham Pal Home">
+          <span>Soham Pal.</span>
+          <div class="brand-badge">
+            <span class="status-dot"></span>
+            <span>Available</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="sound-toggle-btn" id="audio-toggle" aria-label="Toggle Sound Effects">
+            <span class="sound-waves">
+              <span class="sound-wave-bar"></span>
+              <span class="sound-wave-bar"></span>
+              <span class="sound-wave-bar"></span>
+            </span>
+            <span class="sound-status">SOUND OFF</span>
+          </button>
+
+          <a href="#contact" class="btn-luxury btn-luxury-primary" style="padding: 8px 18px; font-size: 0.72rem;">
+            Let's Talk
+          </a>
+
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION WITH 360° INTERACTIVE TURNTABLE -->
+      <section class="hero-pin-wrapper" id="hero">
+        <div class="hero-bg-lights">
+          <div class="hero-glow-core"></div>
+        </div>
+
+        <!-- Central 360 Turntable Stage -->
+        <div class="hero-stage">
+
+
+          <div class="turntable-viewport" data-cursor="drag" title="Scroll or Drag to Rotate 360°">
+
+            <!-- Ground Coordinate Rings -->
+            <div class="turntable-ground-rig">
+              <div class="ground-ring-outer"></div>
+              <div class="ground-ring-inner"></div>
+              <div class="ground-compass-tick">
+                <span>000° N</span>
+                <span>090° E</span>
+                <span>180° S</span>
+                <span>270° W</span>
+              </div>
+            </div>
+
+            <!-- Floating Orbital Rings -->
+            <div class="floating-orbitals">
+              <div class="orbital-ring orbital-ring-1"></div>
+              <div class="orbital-ring orbital-ring-2"></div>
+            </div>
+
+            <!-- Central Rotating 3D Monolith Assembly -->
+            <div class="turntable-assembly">
+
+              <!-- Front Face: Soham's High-Resolution Portrait -->
+              <div class="subject-card card-front">
+                <img src="assets/images/soham-portrait.png" alt="Soham Pal - Computer Science & Data Scientist"
+                  class="subject-portrait-img">
+                <div class="portrait-vignette"></div>
+                <div class="portrait-glare"></div>
+
+                <div class="subject-tag-overlay">
+                  <span class="subject-tag-name">SOHAM PAL</span>
+                  <span class="subject-tag-status">DATA SCIENTIST & ML</span>
+                </div>
+              </div>
+
+              <!-- Back Face (180°): Holographic Neural Architecture Schematic -->
+              <div class="subject-card card-back">
+                <div class="card-back-grid"></div>
+                <div class="blueprint-header">
+                  <span>// ARCHITECTURAL CORE</span>
+                  <span>SYS-V4.2</span>
+                </div>
+
+                <div>
+                  <div
+                    style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--gold-primary); letter-spacing: 0.15em;">
+                    CORE SPECIFICATIONS</div>
+                  <h3 class="blueprint-title">Intelligent & Neural Systems</h3>
+
+                  <div class="blueprint-metrics">
+                    <div class="metric-mini-box">
+                      <div class="metric-mini-val">93%</div>
+                      <div class="metric-mini-lbl">CNN MRI ACCURACY</div>
+                    </div>
+                    <div class="metric-mini-box">
+                      <div class="metric-mini-val">180K+</div>
+                      <div class="metric-mini-lbl">DATA RECORDS MINED</div>
+                    </div>
+                    <div class="metric-mini-box">
+                      <div class="metric-mini-val">BERT</div>
+                      <div class="metric-mini-lbl">NLP & EMOTION AI</div>
+                    </div>
+                    <div class="metric-mini-box">
+                      <div class="metric-mini-val">B.Tech</div>
+                      <div class="metric-mini-lbl">CSE • ADAMAS '27</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blueprint-footer">
+                  <span>STATUS: OPTIMIZED</span>
+                  <span>KOLKATA, INDIA</span>
+                </div>
+              </div>
+
+              <!-- 3D Volumetric Depth Edges -->
+              <div class="subject-card-side side-left"></div>
+              <div class="subject-card-side side-right"></div>
+
+            </div>
+          </div>
+
+          <!-- Ambient Typography Overlay (Spaced Around Central Turntable) -->
+          <div class="hero-ui-layer">
+
+            <!-- Left Column: Typography, Typewriter & Actions -->
+            <div class="hero-content-left">
+              <h1 class="hero-headline">
+                Hi, I am <br>
+                <span class="title-gradient">Soham Pal</span>
+              </h1>
+
+              <div class="hero-typewriter-row" style="margin-bottom: var(--space-3);">
+                <span class="typewriter-label-dark">Passionate about</span>
+                <span class="kinetic-word-wrap" id="kinetic-fascinated-wrap">
+                  <span class="kinetic-word enter" id="kinetic-fascinated">Machine Learning</span>
+                </span>
+                <span class="typewriter-cursor">|</span>
+              </div>
+
+              <!-- Animated Typewriter Text -->
+              <div class="hero-typewriter-row">
+                <span class="typewriter-label-dark">Focused to</span>
+                <span class="typewriter-highlight-dark" id="typewriter-text"></span>
+                <span class="typewriter-cursor">|</span>
+              </div>
+
+              <p class="hero-desc">
+                I build data-driven applications, AI/ML projects, and modern web solutions. Turning complex problems
+                into intelligent systems and predictive software.
+              </p>
+
+              <!-- Two Modern Luxury CTA Buttons -->
+              <div class="hero-cta-group">
+                <a href="#projects" class="btn-luxury btn-luxury-primary">
+                  <span>View My Projects</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+
+
+              <!-- Social Icons -->
+              <div class="hero-social-row" style="margin-top: var(--space-6);">
+                <a href="https://github.com/sohampal-tech" target="_blank" rel="noopener noreferrer" class="btn-icon-circle"
+                  title="GitHub Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/soham-pal-0211a0290/" target="_blank" rel="noopener noreferrer" class="btn-icon-circle"
+                  title="LinkedIn Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+
+                <a href="mailto:sohampal126@gmail.com" class="btn-icon-circle" title="Send Email">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </a>
+
+                <button class="btn-icon-circle" data-copy="sohampal126@gmail.com" title="Copy Email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Column: Live Rotation HUD & Highlights -->
+            <div class="hero-content-right">
+              <!-- Live 360 HUD -->
+              <div
+                style="background: rgba(14, 14, 22, 0.75); border: 1px solid var(--border-gold); padding: 14px 20px; border-radius: var(--radius-lg); backdrop-filter: var(--blur-glass); text-align: left; width: 100%;">
+                <div
+                  style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase;">
+                  360° Interactive Turntable
+                </div>
+                <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 6px;">
+                  <span id="rotation-val"
+                    style="font-family: var(--font-heading); font-size: 2rem; font-weight: 900; color: var(--gold-light);">000°</span>
+                  <span id="rotation-stage"
+                    style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gold-primary);">[ FRONT
+                    ]</span>
+                </div>
+                <div
+                  style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-secondary); margin-top: 6px;">
+                  ✦ Scroll or Drag to Inspect Monolith
+                </div>
+              </div>
+
+              <!-- Quick Badges -->
+              <div style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                <div
+                  style="padding: 10px 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); display: flex; justify-content: space-between;">
+                  <span>ACADEMIC</span>
+                  <span style="color: var(--text-primary);">B.Tech CSE '27</span>
+                </div>
+                <div
+                  style="padding: 10px 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); display: flex; justify-content: space-between;">
+                  <span>Collage</span>
+                  <span style="color: var(--gold-primary);">ADAMAS UNIVERSITY</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Scroll HUD -->
+          <div class="hero-hud-bottom">
+            <div class="scroll-indicator-pill">
+              <span>Scroll to Rotate 360°</span>
+              <span class="scroll-arrow-anim">↓</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CONTINUOUS MARQUEE -->
+      <section class="marquee-container" aria-label="Technical Focus Ticker">
+        <div class="marquee-track">
+          <span class="marquee-item">Machine Learning <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Deep Learning (VGG16 / CNN) <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">BERT & NLP Emotion AI <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Computer Vision & YOLO <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Data Science & Analytics <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Streamlit Applications <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">PostgreSQL & REST APIs <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Smart India Hackathon <span class="marquee-separator">✦</span></span>
+          <!-- Duplicate for infinite seamless scroll -->
+          <span class="marquee-item">Machine Learning <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Deep Learning (VGG16 / CNN) <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">BERT & NLP Emotion AI <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Computer Vision & YOLO <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Data Science & Analytics <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Streamlit Applications <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">PostgreSQL & REST APIs <span class="marquee-separator">✦</span></span>
+          <span class="marquee-item">Smart India Hackathon <span class="marquee-separator">✦</span></span>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Academic & Professional Narrative</div>
+            <h2 class="section-title">Bridging Theory & <span class="highlight">Autonomous AI Systems</span></h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-narrative">
+              <p>
+                Hi, I'm <strong>Soham Pal</strong>, a Computer Science and Engineering student at
+                <strong>Adamas University, Kolkata</strong>. I'm passionate about
+                <strong>Artificial Intelligence, Machine Learning, NLP, and Data Science</strong>, and I enjoy turning
+                real-world problems into practical technology solutions.
+              </p>
+              <p>
+                I have hands-on experience building AI and data-driven applications using
+                <strong>Python, Machine Learning, NLP, Streamlit, PostgreSQL, Pandas, and REST APIs</strong>. Through
+                internships and academic projects, I've worked on areas such as <strong>sentiment and emotion analysis,
+                wellness analytics, logistics analytics, and agricultural disease detection</strong>.
+              </p>
+              <p>
+                I'm continuously improving my skills in <strong>AI/ML, software development, and problem-solving</strong>,
+                while exploring new technologies and building projects that create meaningful impact.
+              </p>
+
+              <div class="hero-cta-group" style="margin-top: var(--space-6);">
+                <a href="#contact" class="btn-luxury btn-luxury-primary">
+                  <span>Get In Touch</span>
+                </a>
+                <a href="assets/Soham_Pal_Resume.pdf" download="Soham_Pal_Resume.pdf"
+                  class="btn-luxury btn-luxury-outline">
+                  <span>Download Resume</span>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="about-stats-grid">
+              <div class="stat-card">
+                <div class="stat-number" data-target="5" data-suffix="+">0+</div>
+                <div class="stat-label">Projects Built</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="3" data-suffix="">0</div>
+                <div class="stat-label">Internships Completed</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="6.5" data-suffix="/10" data-float="true">0.0/10</div>
+                <div class="stat-label">B.Tech CSE CGPA</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="2027" data-suffix="">0</div>
+                <div class="stat-label">Graduation Year</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS ARSENAL -->
+      <section class="section" id="skills" style="background: rgba(255, 255, 255, 0.015);">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Technical Capabilities</div>
+            <h2 class="section-title">Engineering <span class="highlight">Arsenal</span></h2>
+          </div>
+
+          <div class="skills-container">
+            <!-- Category 1: Languages & Fundamentals -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">Programming & DSA</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">C</span>
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">Data Structures</span>
+                <span class="skill-pill">Algorithms</span>
+                <span class="skill-pill">Object-Oriented Programming</span>
+              </div>
+            </div>
+
+            <!-- Category 2: Machine Learning & DL -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">Deep Learning & ML</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">TensorFlow</span>
+                <span class="skill-pill">Keras</span>
+                <span class="skill-pill">CNN Architectures</span>
+                <span class="skill-pill">VGG16</span>
+                <span class="skill-pill">Scikit-learn</span>
+                <span class="skill-pill">Regression & Classification</span>
+                <span class="skill-pill">Clustering</span>
+              </div>
+            </div>
+
+            <!-- Category 3: NLP & Vision -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">NLP & Computer Vision</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">BERT</span>
+                <span class="skill-pill">VADER</span>
+                <span class="skill-pill">Sentiment Analysis</span>
+                <span class="skill-pill">Emotion AI</span>
+                <span class="skill-pill">YOLO</span>
+                <span class="skill-pill">PIL</span>
+                <span class="skill-pill">Image Processing</span>
+              </div>
+            </div>
+
+            <!-- Category 4: Analytics & BI -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">Data Analytics & BI</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">Pandas</span>
+                <span class="skill-pill">NumPy</span>
+                <span class="skill-pill">Power BI</span>
+                <span class="skill-pill">Matplotlib</span>
+                <span class="skill-pill">Seaborn</span>
+                <span class="skill-pill">EDA</span>
+                <span class="skill-pill">Excel</span>
+              </div>
+            </div>
+
+            <!-- Category 5: Databases & Frameworks -->
+            <div class="skill-category-card">
+              <div class="skill-cat-header">
+                <div class="skill-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+                <h3 class="skill-cat-title">Databases & Tools</h3>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">PostgreSQL</span>
+                <span class="skill-pill">Streamlit</span>
+                <span class="skill-pill">Git & GitHub</span>
+                <span class="skill-pill">VS Code</span>
+                <span class="skill-pill">REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS SECTION -->
+      <section class="section" id="certifications" style="background: rgba(255,255,255,0.015);">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Verified Achievements</div>
+            <h2 class="section-title">Certifications &amp; <span class="highlight">Honors</span></h2>
+          </div>
+
+          <div class="cert-grid">
+
+            <!-- Cert 1: IBM Design Thinking -->
+            <a href="https://www.credly.com/badges/ab2eceaa-2692-418a-9af5-bab27812769e/print" target="_blank" rel="noopener noreferrer" class="cert-card">
+              <div class="cert-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="8" r="7" />
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                </svg>
+              </div>
+              <div class="cert-body">
+                <div class="cert-issuer">IBM</div>
+                <h3 class="cert-title">Design Thinking</h3>
+              </div>
+              <div class="cert-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Cert 2: Simplilearn Advanced Python -->
+            <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NzU4IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODUwOTI2OF84NzEyNTQ3MTc1MDczOTIxMjk5Ny5wbmciLCJ1c2VybmFtZSI6IlNvaGFtIFBhbCJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7755%2FAdvanced%2520Python_%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1629753709917327311&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVDwx2zk0xdcl3jkqyrytKTUstKsrMS49PKsovL04tsvXJzMtOTfHMAwBWW2QJQQAAAA%3D%3D" target="_blank" rel="noopener noreferrer" class="cert-card">
+              <div class="cert-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="8" r="7" />
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                </svg>
+              </div>
+              <div class="cert-body">
+                <div class="cert-issuer">Simplilearn</div>
+                <h3 class="cert-title">Advanced Python</h3>
+              </div>
+              <div class="cert-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Cert 3: PW Skills Data Analyst -->
+            <a href="https://pwskills.com/learn/certificate/5ac46ffd-58ef-4b1d-a882-9a25b42f1df1/?isCareerPath=true" target="_blank" rel="noopener noreferrer" class="cert-card">
+              <div class="cert-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="8" r="7" />
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                </svg>
+              </div>
+              <div class="cert-body">
+                <div class="cert-issuer">PW Skills</div>
+                <h3 class="cert-title">Data Analyst</h3>
+              </div>
+              <div class="cert-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Cert 4: Smart India Hackathon -->
+            <a href="https://www.credly.com/badges/3a7b59f0-2aa9-41de-9a00-fad68104ed0d/print" target="_blank" rel="noopener noreferrer" class="cert-card">
+              <div class="cert-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+              <div class="cert-body">
+                <div class="cert-issuer">AWS</div>
+                <h3 class="cert-title">AWS Academy Graduate - Machine Learning Foundations</h3>
+              </div>
+              <div class="cert-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS SECTION -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Featured Portfolio</div>
+            <h2 class="section-title">Selected <span class="highlight">Engineering Works</span></h2>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card" data-project-key="brain-tumor" data-cursor="view">
+              <div class="project-media-wrapper">
+                <img src="assets/images/projects/brain-tumor.jpg" alt="Brain Tumor Detection MRI AI"
+                  class="project-media">
+                <span class="project-overlay-badge">93% Accuracy</span>
+              </div>
+              <div class="project-content">
+                <div class="project-number">01 // COMPUTER VISION & HEALTHCARE</div>
+                <h3 class="project-title">Brain Tumor Detection Using Deep Learning</h3>
+                <p class="project-desc">
+                  Convolutional neural network architecture utilizing transfer learning (VGG16) and TensorFlow/Keras to
+                  classify MRI scans into tumorous and non-tumorous cases with medical-grade precision.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">TensorFlow</span>
+                  <span class="project-tag">Keras</span>
+                  <span class="project-tag">VGG16</span>
+                  <span class="project-tag">MRI Classification</span>
+                  <span class="project-tag">Python</span>
+                </div>
+                <div class="project-footer">
+                  <span>March 2026</span>
+                  <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
+                    Inspect Case Study ↗
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card" data-project-key="customer-analytics" data-cursor="view">
+              <div class="project-media-wrapper">
+                <img src="assets/images/projects/customer-analytics.jpg" alt="Customer Behavior Shopping Insights"
+                  class="project-media">
+                <span class="project-overlay-badge">Business Intelligence</span>
+              </div>
+              <div class="project-content">
+                <div class="project-number">02 // DATA SCIENCE & CLUSTERING</div>
+                <h3 class="project-title">Customer Behavior Analyst & Segmentation</h3>
+                <p class="project-desc">
+                  Full-stack business intelligence pipeline evaluating consumer shopping patterns, purchasing trends,
+                  and customer segments. Integrated MySQL pipelines and interactive Power BI executive dashboards.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Pandas</span>
+                  <span class="project-tag">MySQL</span>
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">EDA</span>
+                </div>
+                <div class="project-footer">
+                  <span>January 2026</span>
+                  <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
+                    Inspect Case Study ↗
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card" data-project-key="flight-delay" data-cursor="view">
+              <div class="project-media-wrapper">
+                <img src="assets/images/projects/flight-delay.jpg" alt="Flight Delay Predictive Machine Learning"
+                  class="project-media">
+                <span class="project-overlay-badge">Predictive ML</span>
+              </div>
+              <div class="project-content">
+                <div class="project-number">03 // MACHINE LEARNING & RISK MODELING</div>
+                <h3 class="project-title">US Flight Delay Predictive Analytics Engine</h3>
+                <p class="project-desc">
+                  Supervised predictive classification pipeline to forecast commercial airline delays, diversions, and
+                  weather cancellations across US hub corridors using historical telemetry and Scikit-learn.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Scikit-Learn</span>
+                  <span class="project-tag">Classification</span>
+                  <span class="project-tag">Pandas</span>
+                  <span class="project-tag">NumPy</span>
+                  <span class="project-tag">EDA</span>
+                </div>
+                <div class="project-footer">
+                  <span>November 2025</span>
+                  <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
+                    Inspect Case Study ↗
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card" data-project-key="crop-recommend" data-cursor="view">
+              <div class="project-media-wrapper">
+                <img src="assets/images/projects/crop-recommendation.jpg" alt="Smart India Hackathon Crop AI"
+                  class="project-media">
+                <span class="project-overlay-badge">SIH 2025 Finalist</span>
+              </div>
+              <div class="project-content">
+                <div class="project-number">04 // SMART INDIA HACKATHON</div>
+                <h3 class="project-title">AgroSmart: Soil & Climate Crop Recommender</h3>
+                <p class="project-desc">
+                  Engineered an intelligent precision agricultural engine analyzing soil parameters, NPK values,
+                  humidity, temperature, and microclimates to recommend optimal crops for maximum yield efficiency.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Precision Agriculture</span>
+                  <span class="project-tag">Supervised ML</span>
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Streamlit</span>
+                </div>
+                <div class="project-footer">
+                  <span>September 2025</span>
+                  <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
+                    Inspect Case Study ↗
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section class="section" id="experience" style="background: rgba(255, 255, 255, 0.01);">
+        <div class="container">
+          <div class="section-header" style="text-align: center; max-width: 650px; margin-inline: auto;">
+            <div class="section-eyebrow">Professional Track Record</div>
+            <h2 class="section-title">Industry <span class="highlight">Experience</span></h2>
+          </div>
+
+          <div class="timeline">
+            <!-- Experience Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">AI Intern</h3>
+                    <div class="timeline-company">Infosys Springboard</div>
+                    </div>
+
+                </div>
+                <ul class="timeline-points">
+                  <li>Developed an NLP-based sentiment and emotion analysis system using Python, BERT, and VADER to
+                    classify complex emotional states from text.</li>
+                  <li>Built an interactive personalized recommendation system with Streamlit-based emotion trend
+                    visualizations.</li>
+                  <li>Integrated REST APIs and PostgreSQL to manage user data, analysis results, and recommendation
+                    history.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Data Science Intern</h3>
+                    <div class="timeline-company">Unified Mentor Pvt. Ltd.</div>
+                  </div>
+
+                </div>
+                <ul class="timeline-points">
+                  <li>Analyzed 180,519 shipment records using Python, Pandas, and exploratory data analysis to evaluate
+                    delivery performance and SLA compliance.</li>
+                  <li>Identified shipping-mode and regional delay patterns through risk-ratio and delay-gap analysis,
+                    uncovering a 54.83% late-delivery vulnerability.</li>
+                  <li>Developed and deployed an interactive Streamlit dashboard using Pandas, Matplotlib, Seaborn, and
+                    Scikit-learn.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Machine Learning Intern</h3>
+                    <div class="timeline-company">BharatCare — AICTE Internship</div>
+                  </div>
+
+                </div>
+                <ul class="timeline-points">
+                  <li>Developed an interactive <strong>Climate Intelligence Dashboard</strong> using Python and Streamlit for weather analytics, statistical analysis, and climate trend exploration.</li>
+                  <li>Implemented climate risk &amp; similarity analysis, seasonal pattern detection, extreme weather identification, and multi-country climate comparison modules.</li>
+                  <li>Built interactive time-series charts, heatmaps, radar/wind visualizations, correlation plots, and global climate maps to communicate climate insights effectively.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="contact-header-wrap">
+            <h2 class="contact-section-title">Get In Touch</h2>
+            <p class="contact-section-subtitle">
+              Have a project in mind or want to collaborate? Let's connect!
+            </p>
+          </div>
+
+          <div class="contact-two-col-grid">
+            <!-- Left Column: Contact Form -->
+            <div class="contact-form-card">
+              <form id="contact-form" class="contact-modern-form">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Name</label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name" required
+                    autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email</label>
+                  <input type="email" id="contact-email" name="email" class="form-input"
+                    placeholder="your.email@example.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message</label>
+                  <textarea id="contact-message" name="message" class="form-textarea" rows="5"
+                    placeholder="Tell me about your project or idea..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-contact-send" id="contact-submit-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Right Column: Information Cards -->
+            <div class="contact-info-col">
+              <!-- Connect With Me Card -->
+              <div class="contact-side-card">
+                <h3 class="side-card-title">Connect With Me</h3>
+                <div class="connect-items-list">
+                  <!-- GitHub -->
+                  <div class="connect-item">
+                    <div class="connect-icon-box">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                      </svg>
+                    </div>
+                    <div class="connect-item-content">
+                      <div class="connect-item-name">GitHub</div>
+                      <a href="https://github.com/sohampal-tech" target="_blank" rel="noopener noreferrer"
+                        class="connect-item-link">View Profile</a>
+                    </div>
+                  </div>
+
+                  <!-- LinkedIn -->
+                  <div class="connect-item">
+                    <div class="connect-icon-box">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
+                    </div>
+                    <div class="connect-item-content">
+                      <div class="connect-item-name">LinkedIn</div>
+                      <a href="https://www.linkedin.com/in/soham-pal-0211a0290/" target="_blank" rel="noopener noreferrer"
+                        class="connect-item-link">View Profile</a>
+                    </div>
+                  </div>
+
+                  <!-- Email with Actions -->
+                  <div class="connect-item">
+                    <div class="connect-icon-box">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                      </svg>
+                    </div>
+                    <div class="connect-item-content">
+                      <div class="connect-item-name">Email</div>
+                      <div class="email-sub-actions">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sohampal126@gmail.com" target="_blank"
+                          rel="noopener noreferrer" class="email-action-link">Open in Gmail</a>
+                        <a href="mailto:sohampal126@gmail.com" class="email-action-link">Try Email Client</a>
+                        <button type="button" class="email-action-link copy-email-btn" data-copy="sohampal126@gmail.com"
+                          title="Copy Email to Clipboard">
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                          </svg>
+                          Copy Email
+                        </button>
+                      </div>
+                      <div class="connect-email-text">sohampal126@gmail.com</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Info Card -->
+              <div class="contact-side-card">
+                <h3 class="side-card-title">Quick Info</h3>
+                <div class="quick-info-list">
+                  <div class="quick-info-row">
+                    <span class="quick-info-label">Email:</span>
+                    <a href="mailto:sohampal126@gmail.com" class="quick-info-highlight">sohampal126@gmail.com</a>
+                  </div>
+                  <div class="quick-info-row">
+                    <span class="quick-info-label">Location:</span>
+                    <span class="quick-info-val">Kolkata, India</span>
+                  </div>
+                  <div class="quick-info-row">
+                    <span class="quick-info-label">Education:</span>
+                    <span class="quick-info-val">B.Tech CSE, Adamas University</span>
+                  </div>
+                  <div class="quick-info-row">
+                    <span class="quick-info-label">Resume:</span>
+                    <a href="assets/Soham_Pal_Resume.pdf" download="Soham_Pal_Resume.pdf" class="quick-info-highlight"
+                      style="display: inline-flex; align-items: center; gap: 4px;">
+                      Download PDF ↓
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div>
+          <strong style="color: var(--text-primary);">SOHAM PAL</strong> — Computer Science & Data Science
+        </div>
+        <div id="kolkata-time" style="color: var(--gold-light);">
+          --:--:-- IST (Kolkata, IN)
+        </div>
+        <div>
+          <a href="#hero" style="color: var(--gold-primary);">Back to Top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- PROJECT DEEP-DIVE MODAL -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close Project Modal">✕</button>
+      <div
+        style="aspect-ratio: 16/9; width: 100%; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--space-6); background: #000;">
+        <img src="" alt="" id="modal-image" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div id="modal-category"
+        style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gold-primary); letter-spacing: 0.1em; margin-bottom: var(--space-2);">
+      </div>
+      <h2 id="modal-title"
+        style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 800; color: #fff; margin-bottom: var(--space-4);">
+      </h2>
+      <p id="modal-desc"
+        style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-6);"></p>
+      <div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: var(--space-3);">
+          Technology Stack & Methodologies</div>
+        <div id="modal-tech" class="project-tags"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notice" id="toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+    <span class="toast-text">Action completed successfully</span>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/cursor.js"></script>
+  <script src="js/hero360.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
