@@ -631,9 +631,35 @@
           <div class="projects-grid">
             <!-- Project 1 -->
             <article class="project-card" data-project-key="brain-tumor" data-cursor="view">
+              <!-- Auto-sliding carousel for MRI screenshots -->
               <div class="project-media-wrapper">
-                <img src="assets/images/projects/brain-tumor.jpg" alt="Brain Tumor Detection MRI AI"
-                  class="project-media">
+                <div class="project-carousel" id="mri-carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="assets/images/projects/mri-slide-1.jpg" alt="MRI App – Upload Interface" class="project-media">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="assets/images/projects/mri-slide-2.jpg" alt="MRI Result – No Tumor 100%" class="project-media">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="assets/images/projects/mri-slide-3.jpg" alt="MRI Result – Pituitary Tumor 99%" class="project-media">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="assets/images/projects/mri-slide-4.jpg" alt="MRI Result – Meningioma 100%" class="project-media">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="assets/images/projects/mri-slide-5.jpg" alt="MRI Result – Glioma Meningioma 84%" class="project-media">
+                    </div>
+                  </div>
+                  <!-- Dot indicators -->
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" data-index="0"></span>
+                    <span class="carousel-dot" data-index="1"></span>
+                    <span class="carousel-dot" data-index="2"></span>
+                    <span class="carousel-dot" data-index="3"></span>
+                    <span class="carousel-dot" data-index="4"></span>
+                  </div>
+                </div>
                 <span class="project-overlay-badge">93% Accuracy</span>
               </div>
               <div class="project-content">
@@ -651,7 +677,10 @@
                   <span class="project-tag">Python</span>
                 </div>
                 <div class="project-footer">
-                  <span>March 2026</span>
+                  <a href="https://github.com/sohampal-tech/Brain-Tumor-Detection-Using-Deep-Learning-MRI-Images-Detection-Using-Computer-Vision" target="_blank" rel="noopener noreferrer" class="project-github-btn" onclick="event.stopPropagation()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    View on GitHub
+                  </a>
                   <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
                     Inspect Case Study ↗
                   </span>
@@ -662,7 +691,7 @@
             <!-- Project 2 -->
             <article class="project-card" data-project-key="customer-analytics" data-cursor="view">
               <div class="project-media-wrapper">
-                <img src="assets/images/projects/customer-analytics.jpg" alt="Customer Behavior Shopping Insights"
+                <img src="assets/images/projects/customer-dashboard.jpg" alt="Customer Behavior Dashboard Power BI"
                   class="project-media">
                 <span class="project-overlay-badge">Business Intelligence</span>
               </div>
@@ -681,7 +710,10 @@
                   <span class="project-tag">EDA</span>
                 </div>
                 <div class="project-footer">
-                  <span>January 2026</span>
+                  <a href="https://github.com/sohampal-tech/Customer-Behavior-Data-Analyst-Project" target="_blank" rel="noopener noreferrer" class="project-github-btn" onclick="event.stopPropagation()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    View on GitHub
+                  </a>
                   <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
                     Inspect Case Study ↗
                   </span>
@@ -692,8 +724,8 @@
             <!-- Project 3 -->
             <article class="project-card" data-project-key="flight-delay" data-cursor="view">
               <div class="project-media-wrapper">
-                <img src="assets/images/projects/flight-delay.jpg" alt="Flight Delay Predictive Machine Learning"
-                  class="project-media">
+                <img src="assets/images/projects/flight-delay-features.png" alt="US Flight Delay Top 15 Feature Importance Chart"
+                  class="project-media" style="object-fit: contain; background: #ffffff;">
                 <span class="project-overlay-badge">Predictive ML</span>
               </div>
               <div class="project-content">
@@ -711,7 +743,10 @@
                   <span class="project-tag">EDA</span>
                 </div>
                 <div class="project-footer">
-                  <span>November 2025</span>
+                  <a href="https://github.com/sohampal-tech/Flight-Delay-Prediction" target="_blank" rel="noopener noreferrer" class="project-github-btn" onclick="event.stopPropagation()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    View on GitHub
+                  </a>
                   <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
                     Inspect Case Study ↗
                   </span>
@@ -740,7 +775,94 @@
                   <span class="project-tag">Streamlit</span>
                 </div>
                 <div class="project-footer">
-                  <span>September 2025</span>
+                  <span class="project-private-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Private Repo
+                  </span>
+                  <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
+                    Inspect Case Study ↗
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="project-card" data-project-key="walmart-sales" data-cursor="view">
+              <div class="project-media-wrapper">
+                <img src="assets/images/projects/walmart-sales.jpg" alt="Walmart Sales Analysis Dashboard"
+                  class="project-media">
+                <span class="project-overlay-badge">Retail Analytics</span>
+              </div>
+              <div class="project-content">
+                <div class="project-number">05 // DATA ANALYTICS &amp; RETAIL INTELLIGENCE</div>
+                <h3 class="project-title">Walmart Sales Analysis</h3>
+                <p class="project-desc">
+                  End-to-end retail analytics pipeline uncovering sales insights across key categories and branches,
+                  profitability by product and location, and customer behavior trends — including ratings, payment
+                  preferences, and peak shopping hours.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Pandas</span>
+                  <span class="project-tag">EDA</span>
+                  <span class="project-tag">Retail Analytics</span>
+                  <span class="project-tag">SQL</span>
+                </div>
+                <div class="project-footer">
+                  <a href="https://github.com/sohampal-tech/Walmart_analysis" target="_blank" rel="noopener noreferrer" class="project-github-btn" onclick="event.stopPropagation()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    View on GitHub
+                  </a>
+                  <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
+                    Inspect Case Study ↗
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 6 -->
+            <article class="project-card" data-project-key="rice-disease" data-cursor="view">
+              <div class="project-media-wrapper" style="aspect-ratio: 16/9;">
+                <div class="project-carousel" id="rice-carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="assets/images/projects/rice-slide-1.jpg" alt="AgriVisionAI – Landing Page" class="project-media" style="object-fit: cover; transition: none;">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="assets/images/projects/rice-slide-2.jpg" alt="AgriVisionAI – Upload Leaf Sample" class="project-media" style="object-fit: cover; transition: none;">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="assets/images/projects/rice-slide-3.jpg" alt="AgriVisionAI – Diagnostic Report Brown Spot" class="project-media" style="object-fit: cover; transition: none;">
+                    </div>
+                  </div>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" data-index="0"></span>
+                    <span class="carousel-dot" data-index="1"></span>
+                    <span class="carousel-dot" data-index="2"></span>
+                  </div>
+                </div>
+                <span class="project-overlay-badge">Computer Vision</span>
+              </div>
+              <div class="project-content">
+                <div class="project-number">06 // COMPUTER VISION &amp; PRECISION AGRICULTURE</div>
+                <h3 class="project-title">AgriVisionAI — Rice Leaf Disease Detection</h3>
+                <p class="project-desc">
+                  AI-powered diagnostic platform for rice leaf disease classification, spatial lesion segmentation,
+                  and severity estimation. Screens leaf images for visible disease symptoms and outputs confidence
+                  scores, infected area percentage, and actionable treatment recommendations.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Computer Vision</span>
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Image Segmentation</span>
+                  <span class="project-tag">Deep Learning</span>
+                  <span class="project-tag">Precision Agriculture</span>
+                </div>
+                <div class="project-footer">
+                  <a href="https://github.com/sohampal-tech/AgriVisionAI" target="_blank" rel="noopener noreferrer" class="project-github-btn" onclick="event.stopPropagation()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    View on GitHub
+                  </a>
                   <span style="color: var(--gold-primary); display: flex; align-items: center; gap: 4px;">
                     Inspect Case Study ↗
                   </span>

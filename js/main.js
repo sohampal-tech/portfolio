@@ -20,6 +20,7 @@ class PortfolioController {
     this.initProjectModals();
     this.initLiveKolkataClock();
     this.initContactForm();
+    this.initProjectCarousels();
   }
 
   /* 1. Luxury Minimal Preloader */
@@ -327,7 +328,7 @@ class PortfolioController {
       'customer-analytics': {
         title: 'Customer Behavior Analyst & Segmentation',
         category: 'Data Science // Predictive Modeling',
-        image: 'assets/images/projects/customer-analytics.jpg',
+        image: 'assets/images/projects/customer-dashboard.jpg',
         desc: 'Conducted high-dimensional customer shopping telemetry analysis across purchasing trends, churn patterns, and behavioral clusters. Integrated SQL relational pipelines and interactive Power BI executive dashboards for decision-grade business intelligence.',
         tech: ['Python', 'Pandas', 'MySQL', 'Power BI', 'EDA', 'Clustering', 'Seaborn']
       },
@@ -344,6 +345,13 @@ class PortfolioController {
         image: 'assets/images/projects/crop-recommendation.jpg',
         desc: 'Engineered for the prestigious Smart India Hackathon (SIH 2025). An intelligent agronomic recommendation engine that evaluates nitrogen, phosphorus, potassium, pH, moisture, and microclimate parameters to recommend optimal crop yields.',
         tech: ['Python', 'Scikit-Learn', 'Precision Agriculture', 'Streamlit', 'Supervised Learning']
+      },
+      'walmart-sales': {
+        title: 'Walmart Sales Analysis',
+        category: 'Data Analytics // Retail Intelligence',
+        image: 'assets/images/projects/walmart-sales.jpg',
+        desc: 'End-to-end retail analytics pipeline analyzing Walmart transactional data to surface actionable business intelligence. Uncovered top-performing product categories and branch-level sales leaders, identified the most profitable locations, and mapped customer behavior trends including ratings distribution, preferred payment methods (Cash, Credit Card, E-wallet), and peak shopping hours across three city branches.',
+        tech: ['Python', 'Pandas', 'SQL', 'EDA', 'Matplotlib', 'Seaborn', 'Retail Analytics']
       }
     };
 
@@ -430,6 +438,68 @@ class PortfolioController {
       setTimeout(() => {
         window.location.href = mailtoUrl;
       }, 500);
+    });
+  }
+
+  /* Project Image Carousel — auto-slides every 2.8s with dot indicators */
+  initProjectCarousels() {
+    document.querySelectorAll('.project-carousel').forEach(carousel => {
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const dots   = carousel.querySelectorAll('.carousel-dot');
+      if (!slides.length) return;
+
+      // Add progress bar element
+      const progress = document.createElement('div');
+      progress.className = 'carousel-progress';
+      progress.style.width = '0%';
+      carousel.appendChild(progress);
+
+      let current  = 0;
+      const total  = slides.length;
+      const INTERVAL = 2800; // ms per slide
+      let startTime = null;
+      let rafId     = null;
+      let paused    = false;
+
+      const goTo = (index) => {
+        slides[current].classList.remove('active');
+        dots[current]?.classList.remove('active');
+        current = (index + total) % total;
+        slides[current].classList.add('active');
+        dots[current]?.classList.add('active');
+        startTime = null; // reset timer
+        progress.style.width = '0%';
+      };
+
+      const tick = (timestamp) => {
+        if (paused) { rafId = requestAnimationFrame(tick); return; }
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const pct = Math.min((elapsed / INTERVAL) * 100, 100);
+        progress.style.width = pct + '%';
+        if (elapsed >= INTERVAL) {
+          goTo(current + 1);
+        }
+        rafId = requestAnimationFrame(tick);
+      };
+
+      // Dot click navigation
+      dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goTo(parseInt(dot.dataset.index));
+        });
+      });
+
+      // Pause on hover
+      carousel.addEventListener('mouseenter', () => { paused = true; });
+      carousel.addEventListener('mouseleave', () => {
+        paused = false;
+        startTime = null;
+        progress.style.width = '0%';
+      });
+
+      rafId = requestAnimationFrame(tick);
     });
   }
 }

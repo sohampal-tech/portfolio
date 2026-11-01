@@ -456,3 +456,162 @@
   color: var(--gold-primary);
   transform: translate(3px, -3px);
 }
+
+
+/* ── PROJECT IMAGE CAROUSEL ────────────────────────────────── */
+.project-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+/* Override: taller aspect ratio for the MRI carousel card */
+.project-media-wrapper:has(#mri-carousel) {
+  aspect-ratio: 4 / 5;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  background: #f1f4f9;
+  display: block;
+  /* prevent the global hover-scale from triggering on carousel images */
+  transition: none;
+}
+
+/* Dot indicators */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 8px var(--gold-glow);
+  transform: scale(1.3);
+}
+
+/* Progress bar at the top of carousel */
+.carousel-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  box-shadow: 0 0 8px var(--gold-glow);
+  z-index: 5;
+  transition: width 0.1s linear;
+}
+
+/* ── PROJECT FOOTER GITHUB BUTTON ─────────────────────────── */
+.project-github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  transition: all var(--duration-fast);
+  white-space: nowrap;
+}
+
+.project-github-btn:hover {
+  color: var(--gold-light);
+  border-color: var(--gold-primary);
+  background: rgba(201, 169, 110, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(201, 169, 110, 0.15);
+}
+
+.project-github-btn svg {
+  flex-shrink: 0;
+  transition: transform var(--duration-fast);
+}
+
+.project-github-btn:hover svg {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+/* Private repo badge */
+.project-private-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.02);
+  letter-spacing: 0.04em;
+}
+
+/* ── WALMART PROJECT PLACEHOLDER ──────────────────────────── */
+.walmart-placeholder-bg {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+}
+
+.walmart-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.walmart-placeholder span {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(201, 169, 110, 0.5);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

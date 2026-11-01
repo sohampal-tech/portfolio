@@ -626,6 +626,7 @@ html {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
 }
 
 .project-card {
