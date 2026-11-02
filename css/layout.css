@@ -625,8 +625,8 @@ html {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: start;
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+  align-items: stretch;
 }
 
 .project-card {
@@ -638,6 +638,7 @@ html {
   transition: all var(--duration-normal) var(--ease-smooth);
   display: flex;
   flex-direction: column;
+  height: 100%;
   cursor: pointer;
 }
 
@@ -650,9 +651,10 @@ html {
 .project-media-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #000;
+  background: radial-gradient(circle at center, #151824 0%, #07080c 100%);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .project-media {

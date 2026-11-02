@@ -335,7 +335,7 @@ class PortfolioController {
       'flight-delay': {
         title: 'US Flight Delay Predictive Analytics Engine',
         category: 'Machine Learning // Risk Modeling',
-        image: 'assets/images/projects/flight-delay.jpg',
+        image: 'assets/images/projects/flight-delay-features.png',
         desc: 'Engineered a supervised predictive classification pipeline to forecast commercial airline delays, diversions, and weather cancellations across key US hub corridors using historical telemetry, air-traffic logistics, and multi-factor regression models.',
         tech: ['Python', 'Scikit-Learn', 'Pandas', 'EDA', 'Classification', 'NumPy']
       },
@@ -352,12 +352,22 @@ class PortfolioController {
         image: 'assets/images/projects/walmart-sales.jpg',
         desc: 'End-to-end retail analytics pipeline analyzing Walmart transactional data to surface actionable business intelligence. Uncovered top-performing product categories and branch-level sales leaders, identified the most profitable locations, and mapped customer behavior trends including ratings distribution, preferred payment methods (Cash, Credit Card, E-wallet), and peak shopping hours across three city branches.',
         tech: ['Python', 'Pandas', 'SQL', 'EDA', 'Matplotlib', 'Seaborn', 'Retail Analytics']
+      },
+      'rice-disease': {
+        title: 'AgriVisionAI — Rice Leaf Disease Detection',
+        category: 'Computer Vision // Precision Agriculture',
+        image: 'assets/images/projects/rice-slide-3.jpg',
+        desc: 'Deep learning diagnostic platform for rice leaf disease classification, spatial lesion segmentation, and infection severity metrics. Automatically screens leaf samples, generates localized disease masks (Brown Spot, Leaf Blast, etc.), computes affected area percentages, and suggests actionable agronomic interventions.',
+        tech: ['Computer Vision', 'Deep Learning', 'PyTorch / TensorFlow', 'Image Segmentation', 'Streamlit', 'Precision Agriculture']
       }
     };
 
     document.querySelectorAll('[data-project-key]').forEach(card => {
       card.addEventListener('click', (e) => {
         if (e.target.closest('a')) return;
+        if (e.target.closest('.carousel-nav-btn')) return;
+        if (e.target.closest('.carousel-dots')) return;
+        if (card.dataset.wasDragged === 'true') return;
 
         const key = card.getAttribute('data-project-key');
         const data = projectData[key];
@@ -441,64 +451,173 @@ class PortfolioController {
     });
   }
 
-  /* Project Image Carousel — auto-slides every 2.8s with dot indicators */
+  /* Project Image Carousel — auto-slides with real touch swipe, mouse drag, and nav arrows */
   initProjectCarousels() {
     document.querySelectorAll('.project-carousel').forEach(carousel => {
+      const track  = carousel.querySelector('.carousel-track');
       const slides = carousel.querySelectorAll('.carousel-slide');
       const dots   = carousel.querySelectorAll('.carousel-dot');
-      if (!slides.length) return;
+      const prevBtn = carousel.querySelector('.carousel-prev');
+      const nextBtn = carousel.querySelector('.carousel-next');
+      const counter = carousel.querySelector('.carousel-counter');
+      const parentCard = carousel.closest('.project-card');
 
-      // Add progress bar element
-      const progress = document.createElement('div');
-      progress.className = 'carousel-progress';
-      progress.style.width = '0%';
-      carousel.appendChild(progress);
+      if (!slides.length || !track) return;
 
-      let current  = 0;
-      const total  = slides.length;
-      const INTERVAL = 2800; // ms per slide
+      // Add progress bar element if not already present
+      let progress = carousel.querySelector('.carousel-progress');
+      if (!progress) {
+        progress = document.createElement('div');
+        progress.className = 'carousel-progress';
+        progress.style.width = '0%';
+        carousel.appendChild(progress);
+      }
+
+      let current = 0;
+      const total = slides.length;
+      const INTERVAL = 3200; // ms per slide
       let startTime = null;
-      let rafId     = null;
-      let paused    = false;
+      let rafId = null;
+      let paused = false;
+
+      // Touch / Drag variables
+      let isDragging = false;
+      let startX = 0;
+      let currentDragDist = 0;
+
+      const updateUI = () => {
+        track.style.transition = 'transform 0.45s cubic-bezier(0.22, 1, 0.36, 1)';
+        track.style.transform = `translateX(-${current * 100}%)`;
+
+        slides.forEach((s, i) => s.classList.toggle('active', i === current));
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+
+        if (counter) {
+          counter.textContent = `${current + 1} / ${total}`;
+        }
+
+        startTime = null;
+        if (progress) progress.style.width = '0%';
+      };
 
       const goTo = (index) => {
-        slides[current].classList.remove('active');
-        dots[current]?.classList.remove('active');
         current = (index + total) % total;
-        slides[current].classList.add('active');
-        dots[current]?.classList.add('active');
-        startTime = null; // reset timer
-        progress.style.width = '0%';
+        updateUI();
       };
 
       const tick = (timestamp) => {
-        if (paused) { rafId = requestAnimationFrame(tick); return; }
-        if (!startTime) startTime = timestamp;
-        const elapsed = timestamp - startTime;
-        const pct = Math.min((elapsed / INTERVAL) * 100, 100);
-        progress.style.width = pct + '%';
-        if (elapsed >= INTERVAL) {
-          goTo(current + 1);
+        if (!paused && !isDragging) {
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+          const pct = Math.min((elapsed / INTERVAL) * 100, 100);
+          if (progress) progress.style.width = pct + '%';
+          if (elapsed >= INTERVAL) {
+            goTo(current + 1);
+          }
         }
         rafId = requestAnimationFrame(tick);
       };
+
+      // Navigation arrows
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goTo(current - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goTo(current + 1);
+        });
+      }
 
       // Dot click navigation
       dots.forEach(dot => {
         dot.addEventListener('click', (e) => {
           e.stopPropagation();
-          goTo(parseInt(dot.dataset.index));
+          goTo(parseInt(dot.dataset.index, 10));
         });
       });
 
-      // Pause on hover
+      // Drag / Swipe handling
+      const handleDragStart = (clientX) => {
+        isDragging = true;
+        startX = clientX;
+        currentDragDist = 0;
+        track.style.transition = 'none';
+        carousel.classList.add('is-dragging');
+      };
+
+      const handleDragMove = (clientX) => {
+        if (!isDragging) return;
+        currentDragDist = clientX - startX;
+        const width = carousel.offsetWidth || 1;
+        const percent = (currentDragDist / width) * 100;
+        track.style.transform = `translateX(calc(-${current * 100}% + ${percent}%))`;
+
+        if (Math.abs(currentDragDist) > 8 && parentCard) {
+          parentCard.dataset.wasDragged = 'true';
+        }
+      };
+
+      const handleDragEnd = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        carousel.classList.remove('is-dragging');
+
+        const threshold = 40; // px
+        if (currentDragDist < -threshold) {
+          goTo(current + 1);
+        } else if (currentDragDist > threshold) {
+          goTo(current - 1);
+        } else {
+          goTo(current);
+        }
+
+        setTimeout(() => {
+          if (parentCard) parentCard.dataset.wasDragged = 'false';
+        }, 200);
+      };
+
+      // Mouse events
+      carousel.addEventListener('mousedown', (e) => {
+        if (e.target.closest('.carousel-nav-btn, .carousel-dots')) return;
+        handleDragStart(e.clientX);
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (isDragging) handleDragMove(e.clientX);
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isDragging) handleDragEnd();
+      });
+
+      // Touch events (mobile & tablet)
+      carousel.addEventListener('touchstart', (e) => {
+        if (e.target.closest('.carousel-nav-btn, .carousel-dots')) return;
+        handleDragStart(e.touches[0].clientX);
+      }, { passive: true });
+
+      carousel.addEventListener('touchmove', (e) => {
+        if (isDragging) handleDragMove(e.touches[0].clientX);
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', () => {
+        if (isDragging) handleDragEnd();
+      });
+
+      // Hover pause
       carousel.addEventListener('mouseenter', () => { paused = true; });
       carousel.addEventListener('mouseleave', () => {
         paused = false;
         startTime = null;
-        progress.style.width = '0%';
+        if (progress) progress.style.width = '0%';
       });
 
+      updateUI();
       rafId = requestAnimationFrame(tick);
     });
   }

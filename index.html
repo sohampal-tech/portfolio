@@ -380,7 +380,7 @@
 
             <div class="about-stats-grid">
               <div class="stat-card">
-                <div class="stat-number" data-target="5" data-suffix="+">0+</div>
+                <div class="stat-number" data-target="6" data-suffix="+">0+</div>
                 <div class="stat-label">Projects Built</div>
               </div>
               <div class="stat-card">
@@ -631,7 +631,7 @@
           <div class="projects-grid">
             <!-- Project 1 -->
             <article class="project-card" data-project-key="brain-tumor" data-cursor="view">
-              <!-- Auto-sliding carousel for MRI screenshots -->
+              <!-- Auto-sliding swipeable carousel for MRI screenshots -->
               <div class="project-media-wrapper">
                 <div class="project-carousel" id="mri-carousel">
                   <div class="carousel-track">
@@ -651,6 +651,15 @@
                       <img src="assets/images/projects/mri-slide-5.jpg" alt="MRI Result – Glioma Meningioma 84%" class="project-media">
                     </div>
                   </div>
+                  <!-- Navigation buttons -->
+                  <button class="carousel-nav-btn carousel-prev" aria-label="Previous slide" onclick="event.stopPropagation()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <button class="carousel-nav-btn carousel-next" aria-label="Next slide" onclick="event.stopPropagation()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <!-- Slide Counter -->
+                  <span class="carousel-counter">1 / 5</span>
                   <!-- Dot indicators -->
                   <div class="carousel-dots">
                     <span class="carousel-dot active" data-index="0"></span>
@@ -822,19 +831,28 @@
 
             <!-- Project 6 -->
             <article class="project-card" data-project-key="rice-disease" data-cursor="view">
-              <div class="project-media-wrapper" style="aspect-ratio: 16/9;">
+              <div class="project-media-wrapper">
                 <div class="project-carousel" id="rice-carousel">
                   <div class="carousel-track">
                     <div class="carousel-slide active">
-                      <img src="assets/images/projects/rice-slide-1.jpg" alt="AgriVisionAI – Landing Page" class="project-media" style="object-fit: cover; transition: none;">
+                      <img src="assets/images/projects/rice-slide-1.jpg" alt="AgriVisionAI – Landing Page" class="project-media">
                     </div>
                     <div class="carousel-slide">
-                      <img src="assets/images/projects/rice-slide-2.jpg" alt="AgriVisionAI – Upload Leaf Sample" class="project-media" style="object-fit: cover; transition: none;">
+                      <img src="assets/images/projects/rice-slide-2.jpg" alt="AgriVisionAI – Upload Leaf Sample" class="project-media">
                     </div>
                     <div class="carousel-slide">
-                      <img src="assets/images/projects/rice-slide-3.jpg" alt="AgriVisionAI – Diagnostic Report Brown Spot" class="project-media" style="object-fit: cover; transition: none;">
+                      <img src="assets/images/projects/rice-slide-3.jpg" alt="AgriVisionAI – Diagnostic Report Brown Spot" class="project-media">
                     </div>
                   </div>
+                  <!-- Navigation buttons -->
+                  <button class="carousel-nav-btn carousel-prev" aria-label="Previous slide" onclick="event.stopPropagation()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <button class="carousel-nav-btn carousel-next" aria-label="Next slide" onclick="event.stopPropagation()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <!-- Slide Counter -->
+                  <span class="carousel-counter">1 / 3</span>
                   <div class="carousel-dots">
                     <span class="carousel-dot active" data-index="0"></span>
                     <span class="carousel-dot" data-index="1"></span>
